@@ -5,7 +5,7 @@ export class Header extends Component {
     return (
       <header className="text-center" style={titleStyle}>
         <h1 className="pt-2 pb-2 m-0">Todo List</h1>
-        <Link style={linkStyle} to="/">
+        <Link style={linkStyle} to="/todo">
           Home
         </Link>{" "}
         <span style={{ color: "white" }}>|</span>{" "}
