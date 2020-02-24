@@ -15,7 +15,7 @@ function App() {
         <Header />
         <Route
           exact
-          path="/"
+          path="/todo"
           render={props => (
             <React.Fragment>
               <TodoList dispatch={dispatch} state={store} />
