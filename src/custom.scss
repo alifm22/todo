@@ -1,0 +1,176 @@
+@import "~bootstrap/scss/bootstrap.scss";
+header {
+  background-color: #333;
+}
+.funkyradio {
+  div {
+    clear: both;
+    overflow: hidden;
+  }
+
+  label {
+    width: 100%;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #d1d3d4;
+    font-weight: normal;
+    border-right: none;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  button.trashBtn {
+    border: #d1d3d4 solid 1px;
+    border-left: none;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+    border-radius: 0 4px 4px 0;
+  }
+  button.editBtn {
+    border: #d1d3d4 solid 1px;
+    border-left: none;
+    border-right: none;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  button.trashBtn:hover {
+    color: #d9534f;
+  }
+
+  button.editBtn:hover {
+    color: #f0ad4e;
+  }
+
+  input[type="checkbox"] {
+    &:empty {
+      display: none;
+
+      ~ label {
+        position: relative;
+        line-height: 2.5em;
+        text-indent: 3.25em;
+        margin-top: 2em;
+        cursor: pointer;
+        user-select: none;
+
+        &:before {
+          position: absolute;
+          display: block;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          content: "";
+          width: 2.5em;
+          background: #bd570070;
+          border-radius: 3px 0 0 3px;
+        }
+      }
+    }
+
+    &:hover:not(:checked) ~ label {
+      color: #888;
+
+      &:before {
+        content: "\2713";
+        text-indent: 0.9em;
+        color: #c2c2c2;
+      }
+    }
+
+    &:checked ~ label {
+      color: #777;
+
+      &:before {
+        content: "\2713";
+        text-indent: 0.9em;
+        color: #333;
+        background-color: #ccc;
+      }
+    }
+
+    &:focus ~ label:before {
+      box-shadow: 0 0 0 3px #999;
+    }
+  }
+
+  &-default {
+    input[type="radio"],
+    input[type="checkbox"] {
+      &:checked ~ label:before {
+        color: #333;
+        background-color: #ccc;
+      }
+    }
+  }
+
+  &-primary {
+    input[type="radio"],
+    input[type="checkbox"] {
+      &:checked ~ label:before {
+        color: #fff;
+        background-color: #337ab7;
+      }
+    }
+  }
+
+  &-success {
+    input[type="radio"],
+    input[type="checkbox"] {
+      &:checked ~ label:before {
+        color: #fff;
+        background-color: #5cb85c;
+      }
+    }
+  }
+
+  &-danger {
+    input[type="radio"],
+    input[type="checkbox"] {
+      &:checked ~ label:before {
+        color: #fff;
+        background-color: #d9534f;
+      }
+    }
+  }
+
+  &-warning {
+    input[type="radio"],
+    input[type="checkbox"] {
+      &:checked ~ label:before {
+        color: #fff;
+        background-color: #f0ad4e;
+      }
+    }
+  }
+
+  &-info {
+    input[type="radio"],
+    input[type="checkbox"] {
+      &:checked ~ label:before {
+        color: #fff;
+        background-color: #5bc0de;
+      }
+    }
+  }
+}
+h1 {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(6, 68, 80, 1) 100%
+  );
+  color: #c0d8d0;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  border-color: #053a4a #053a49 #fff;
+  color: #4b9c4b;
+}
+
+nav > a {
+  color: #843c00;
+}
